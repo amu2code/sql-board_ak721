@@ -1,0 +1,2825 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question Sets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      <style>
+    * * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'lato', serif;
+}
+
+body {
+  background: #0f172a;
+  background-image: url('totoro.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #d9f99d;
+}
+
+/* HEADER - GLASS */
+header {
+  text-align: center;
+  padding: 20px;
+  font-size: 26px;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(132, 204, 22, 0.4);
+  color: #bef264;
+
+  transition: 0.3s;
+}
+
+header:hover {
+  background: rgba(132, 204, 22, 0.15);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* DROPDOWN - GLASS */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(132, 204, 22, 0.4);
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  color: #d9f99d;
+  font-size: 15px;
+  margin-bottom: 20px;
+
+  transition: 0.3s;
+}
+
+select:hover {
+  box-shadow: 0 0 12px #84cc16;
+  background: rgba(132, 204, 22, 0.2);
+  cursor: pointer;
+}
+
+/* SET */
+.set {
+  display: none;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* QUESTION CARD - GLASS PANEL */
+.question {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  margin: 20px auto;
+  padding: 18px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(132, 204, 22, 0.25);
+
+  max-width: 800px;
+
+  transition: 0.35s ease;
+}
+
+.question:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 25px rgba(132, 204, 22, 0.5);
+  border-color: #84cc16;
+}
+
+/* QUESTION TITLE */
+.question-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #bef264;
+}
+
+/* IMAGE ROW */
+.image-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE BOX - MINI GLASS */
+.image-box {
+  flex: 1;
+  min-width: 250px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+
+  border: 1px solid rgba(132, 204, 22, 0.2);
+
+  transition: 0.3s;
+}
+
+.image-box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 15px #84cc16;
+}
+
+/* LABEL TEXT */
+.image-box span {
+  font-size: 13px;
+  color: #a3e635;
+}
+
+/* IMAGES */
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(132, 204, 22, 0.6);
+}
+  </style>
+</head>
+<body>
+<header>
+<h1>DBMS(database management system)</h1>
+</header>
+
+<div class="container">
+  <label>Select a Set:</label><br>
+  <select id="setSelector" onchange="showSet()">
+    <option value="">-- Choose Set --</option>
+    <option value="set1">Set 1</option>
+    <option value="set2">Set 2</option>
+    <option value="set3">Set 3</option>
+    <option value="set4">Set 4</option>
+    <option value="set5">Set 5</option>
+    <option value="set6">Set 6</option>
+    <option value="set7">Set 7</option>
+    <option value="set8">Set 8</option>
+    <option value="set9">Set 9</option>
+    <option value="set10">Set 10</option>
+    <option value="set11">Set 11</option>
+    <option value="set12">Set 12</option>
+    <option value="set13">Set 13</option>
+    <option value="set14">Set 14</option>
+  </select>
+
+
+  
+  <div id="set1" class="set">
+    <h2>Set 1</h2>
+
+    <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1_output.png" alt="Output Image">
+    </div>
+
+    <div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20_output.png" alt="Output Image">
+    </div>
+    <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 30</b><br>
+      <img src="images/q30.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q30_output.png" alt="Output Image">
+    </div>
+   </div>
+
+  <!-- Copy same structure for other sets -->
+  <div id="set2" class="set"><h2>Set 2</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-2.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-2_output.png" alt="Output Image">
+    </div>
+
+    <div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-2_output.png" alt="Output Image">
+    </div><div>
+  <b>Question 21</b><br>
+      <img src="images/q21-2.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-2_output.png" alt="Output Image">
+    </div>
+
+    <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-2_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-2.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-2_output.png" alt="Output Image">
+    </div>
+    </div></div>
+  <div id="set3" class="set"><h2>Set 3</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-3.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-3_output.png" alt="Output Image">
+    </div>
+
+    <div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-3_output.png" alt="Output Image">
+    </div>
+        <div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-3.png" alt="Question 2 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-3_output.png" alt="Output Image">
+    </div></div>
+  <div id="set4" class="set"><h2>Set 4</h2>
+   <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-4_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 30</b><br>
+      <img src="images/q30-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q30-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 31</b><br>
+      <img src="images/q31-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q31-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 32</b><br>
+      <img src="images/q32-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q32-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 33</b><br>
+      <img src="images/q33-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q33-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 34</b><br>
+      <img src="images/q34-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q34-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 35</b><br>
+      <img src="images/q35-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q35-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 36</b><br>
+      <img src="images/q36-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q36-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 37</b><br>
+      <img src="images/q37-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q37-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 38</b><br>
+      <img src="images/q38-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q38-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 39</b><br>
+      <img src="images/q39-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q39-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 40</b><br>
+      <img src="images/q40-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q40-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 41</b><br>
+      <img src="images/q41-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q41-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 42</b><br>
+      <img src="images/q42-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q42-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 43</b><br>
+      <img src="images/q43-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q43-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q44-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q44-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q45-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q45-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 46</b><br>
+      <img src="images/q46-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q46-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 47</b><br>
+      <img src="images/q47-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q47-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 48</b><br>
+      <img src="images/q48-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 49</b><br>
+      <img src="images/q49-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-4_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 50</b><br>
+      <img src="images/q50-4.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q50-4_output.png" alt="Output Image">
+    </div></div>
+  <div id="set5" class="set"><h2>Set 5</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-5_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 30</b><br>
+      <img src="images/q30-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q30-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 31</b><br>
+      <img src="images/q31-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q31-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 32</b><br>
+      <img src="images/q32-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q32-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 33</b><br>
+      <img src="images/q33-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q33-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 34</b><br>
+      <img src="images/q34-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q34-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 35</b><br>
+      <img src="images/q35-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q35-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 36</b><br>
+      <img src="images/q36-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q36-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 37</b><br>
+      <img src="images/q37-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q37-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 38</b><br>
+      <img src="images/q38-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q38-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 39</b><br>
+      <img src="images/q39-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q39-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 40</b><br>
+      <img src="images/q40-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q40-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 41</b><br>
+      <img src="images/q41-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q41-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 42</b><br>
+      <img src="images/q42-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q42-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 43</b><br>
+      <img src="images/q43-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q43-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q44-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q44-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q45-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q45-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 46</b><br>
+      <img src="images/q46-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q46-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 47</b><br>
+      <img src="images/q47-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q47-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 48</b><br>
+      <img src="images/q48-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q48-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 49</b><br>
+      <img src="images/q49-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q49-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 50</b><br>
+      <img src="images/q50-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q50-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 51</b><br>
+      <img src="images/q51-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q51-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 52</b><br>
+      <img src="images/q52-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q52-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 53</b><br>
+      <img src="images/q53-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q53-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 54</b><br>
+      <img src="images/q54-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q54-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 55</b><br>
+      <img src="images/q55-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q55-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 56</b><br>
+      <img src="images/q56-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q56-5_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 57</b><br>
+      <img src="images/q57-5.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q57-5_output.png" alt="Output Image">
+    </div></div>
+  <div id="set6" class="set"><h2>Set 6</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-6_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 30</b><br>
+      <img src="images/q30-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q30-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 31</b><br>
+      <img src="images/q31-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q31-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 32</b><br>
+      <img src="images/q32-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q32-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 33</b><br>
+      <img src="images/q33-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q33-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 34</b><br>
+      <img src="images/q34-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q34-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 35</b><br>
+      <img src="images/q35-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q35-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 36</b><br>
+      <img src="images/q36-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q36-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 37</b><br>
+      <img src="images/q37-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q37-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 38</b><br>
+      <img src="images/q38-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q38-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 39</b><br>
+      <img src="images/q39-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q39-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 40</b><br>
+      <img src="images/q40-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q40-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 41</b><br>
+      <img src="images/q41-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q41-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 42</b><br>
+      <img src="images/q42-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q42-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 43</b><br>
+      <img src="images/q43-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q43-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q44-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q44-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q45-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q45-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 46</b><br>
+      <img src="images/q46-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q46-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 47</b><br>
+      <img src="images/q47-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q47-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 48</b><br>
+      <img src="images/q48-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q48-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 49</b><br>
+      <img src="images/q49-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q49-6_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 50</b><br>
+      <img src="images/q50-6.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q50-6_output.png" alt="Output Image">
+    </div></div>
+  <div id="set7" class="set"><h2>Set 7</h2><div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-7_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 30</b><br>
+      <img src="images/q30-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q30-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 31</b><br>
+      <img src="images/q31-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q31-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 32</b><br>
+      <img src="images/q32-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q32-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 33</b><br>
+      <img src="images/q33-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q33-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 34</b><br>
+      <img src="images/q34-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q34-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 35</b><br>
+      <img src="images/q35-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q35-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 36</b><br>
+      <img src="images/q36-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q36-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 37</b><br>
+      <img src="images/q37-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q37-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 38</b><br>
+      <img src="images/q38-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q38-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 39</b><br>
+      <img src="images/q39-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q39-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 40</b><br>
+      <img src="images/q40-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q40-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 41</b><br>
+      <img src="images/q41-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q41-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 42</b><br>
+      <img src="images/q42-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q42-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 43</b><br>
+      <img src="images/q43-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q43-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q44-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q44-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q45-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q45-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 46</b><br>
+      <img src="images/q46-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q46-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 47</b><br>
+      <img src="images/q47-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q47-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 48</b><br>
+      <img src="images/q48-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q48-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 49</b><br>
+      <img src="images/q49-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q49-7_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 50</b><br>
+      <img src="images/q50-7.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q50-7_output.png" alt="Output Image">
+    </div></div>
+  <div id="set8" class="set"><h2>Set 8</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-8_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 30</b><br>
+      <img src="images/q30-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q30-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 31</b><br>
+      <img src="images/q31-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q31-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 32</b><br>
+      <img src="images/q32-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q32-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 33</b><br>
+      <img src="images/q33-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q33-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 34</b><br>
+      <img src="images/q34-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q34-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 35</b><br>
+      <img src="images/q35-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q35-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 36</b><br>
+      <img src="images/q36-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q36-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 37</b><br>
+      <img src="images/q37-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q37-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 38</b><br>
+      <img src="images/q38-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q38-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 39</b><br>
+      <img src="images/q39-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q39-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 40</b><br>
+      <img src="images/q40-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q40-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 41</b><br>
+      <img src="images/q41-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q41-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 42</b><br>
+      <img src="images/q42-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q42-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 43</b><br>
+      <img src="images/q43-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q43-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q44-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q44-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 44</b><br>
+      <img src="images/q45-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q45-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 46</b><br>
+      <img src="images/q46-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q46-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 47</b><br>
+      <img src="images/q47-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q47-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 48</b><br>
+      <img src="images/q48-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q48-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 49</b><br>
+      <img src="images/q49-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q49-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 50</b><br>
+      <img src="images/q50-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q50-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 51</b><br>
+      <img src="images/q51-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q51-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 52</b><br>
+      <img src="images/q52-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q52-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 53</b><br>
+      <img src="images/q53-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q53-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 54</b><br>
+      <img src="images/q54-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q54-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 55</b><br>
+      <img src="images/q55-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q55-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 56</b><br>
+      <img src="images/q56-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q56-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 57</b><br>
+      <img src="images/q57-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q57-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 58</b><br>
+      <img src="images/q58-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q58-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 59</b><br>
+      <img src="images/q59-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q59-8_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 60</b><br>
+      <img src="images/q60-8.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q60-8_output.png" alt="Output Image">
+    </div></div>
+  <div id="set9" class="set"><h2>Set 9</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-9_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 30</b><br>
+      <img src="images/q30-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q30-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 31</b><br>
+      <img src="images/q31-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q31-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 32</b><br>
+      <img src="images/q32-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q32-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 33</b><br>
+      <img src="images/q33-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q33-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 34</b><br>
+      <img src="images/q34-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q34-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 35</b><br>
+      <img src="images/q35-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q35-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 36</b><br>
+      <img src="images/q36-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q36-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 37</b><br>
+      <img src="images/q37-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q37-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 38</b><br>
+      <img src="images/q38-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q38-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 39</b><br>
+      <img src="images/q39-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q39-9_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 40</b><br>
+      <img src="images/q40-9.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q40-9_output.png" alt="Output Image">
+    </div></div>
+  <div id="set10" class="set"><h2>Set 10</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-10_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-10_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-10_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-10_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-10.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-10_output.png" alt="Output Image">
+    </div></div>
+  <div id="set11" class="set"><h2>Set 11</h2><div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-11_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-11_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-11_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-11_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-11_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-11_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-11_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-11.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-11_output.png" alt="Output Image">
+    </div></div>
+  
+  <div id="set12" class="set"><h2>Set 12</h2> <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q11-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q12-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q13-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q14-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q15-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q16-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q17-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q18-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q19-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q20-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-13_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q21-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-13_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q22-13.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-13_output.png" alt="Output Image">
+    </div></div>
+  <div id="set13" class="set"><h2>Set 13</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-14_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-14_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-14.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-14_output.png" alt="Output Image">
+    </div></div>
+  <div id="set14" class="set"><h2>Set 14</h2>
+  <div class="question">
+      <b>Question 1</b><br>
+      <img src="images/q1-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q1-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 2</b><br>
+      <img src="images/q2-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q2-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 3</b><br>
+      <img src="images/q3-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q3-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 4</b><br>
+      <img src="images/q4-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q4-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 5</b><br>
+      <img src="images/q5-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q5-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 6</b><br>
+      <img src="images/q6-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q6-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 7</b><br>
+      <img src="images/q7-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q7-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 8</b><br>
+      <img src="images/q8-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q8-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 9</b><br>
+      <img src="images/q9-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q9-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 10</b><br>
+      <img src="images/q10-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q10-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 11</b><br>
+      <img src="images/q11-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q11-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 12</b><br>
+      <img src="images/q12-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q12-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 13</b><br>
+      <img src="images/q13-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q13-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 14</b><br>
+      <img src="images/q14-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q14-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 15</b><br>
+      <img src="images/q15-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q15-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 16</b><br>
+      <img src="images/q16-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q16-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 17</b><br>
+      <img src="images/q17-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q17-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 18</b><br>
+      <img src="images/q18-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q18-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 19</b><br>
+      <img src="images/q19-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q19-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 20</b><br>
+      <img src="images/q20-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q20-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 21</b><br>
+      <img src="images/q21-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q21-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 22</b><br>
+      <img src="images/q22-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q22-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 23</b><br>
+      <img src="images/q23-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q23-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 24</b><br>
+      <img src="images/q24-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q24-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 25</b><br>
+      <img src="images/q25-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q25-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 26</b><br>
+      <img src="images/q26-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q26-15_output.png" alt="Output Image">
+    </div><div class="question">
+      <b>Question 27</b><br>
+      <img src="images/q27-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q27-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 28</b><br>
+      <img src="images/q28-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q28-15_output.png" alt="Output Image">
+    </div> <div class="question">
+      <b>Question 29</b><br>
+      <img src="images/q29-15.png" alt="Question 1 Image">
+      <br><b>Output:</b><br>
+      <img src="images/q29-15_output.png" alt="Output Image">
+    </div></div>
+
+</div>
+
+<script>
+  function showSet() {
+    var sets = document.getElementsByClassName('set');
+    for (var i = 0; i < sets.length; i++) {
+      sets[i].style.display = 'none';
+    }
+
+    var selected = document.getElementById('setSelector').value;
+    if (selected) {
+      document.getElementById(selected).style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
